@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{252E5DCA-B70B-485A-9D2D-49F412FE7E56}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Booke</RootNamespace>
+    <AssemblyName>Booke</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mobipocket\BinaryReaderExtensions.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="DocumentConstructionException.cs" />
+    <Compile Include="Mobipocket\Endian.cs" />
+    <Compile Include="ITextWriter.cs" />
+    <Compile Include="Mobipocket\MobipocketDictionaryInfo.cs" />
+    <Compile Include="Mobipocket\MobipocketDrm.cs" />
+    <Compile Include="Mobipocket\MobipocketHeader.cs" />
+    <Compile Include="Mobipocket\ExthHeader.cs" />
+    <Compile Include="Mobipocket\ExthRecord.cs" />
+    <Compile Include="Mobipocket\ExthRecordTypes.cs" />
+    <Compile Include="Mobipocket\MobipocketEncryption.cs" />
+    <Compile Include="Mobipocket\MobipocketHuffmanInfo.cs" />
+    <Compile Include="Mobipocket\MobipocketRecord.cs" />
+    <Compile Include="Mobipocket\MobipocketType.cs" />
+    <Compile Include="Mobipocket\PalmDatabase\BigEndianBitConverter.cs" />
+    <Compile Include="Mobipocket\PalmDatabase\DateTimeConverter.cs" />
+    <Compile Include="Mobipocket\LZ77Decoder.cs" />
+    <Compile Include="Mobipocket\MobipocketCompression.cs" />
+    <Compile Include="Mobipocket\MobipocketDocument.cs" />
+    <Compile Include="Mobipocket\MobipocketResourceTypes.cs" />
+    <Compile Include="Mobipocket\MobipocketEncoding.cs" />
+    <Compile Include="Mobipocket\PalmDatabase\PalmDatabaseAttributes.cs" />
+    <Compile Include="Mobipocket\PalmDatabase\PalmDatabaseFormat.cs" />
+    <Compile Include="Mobipocket\PalmDatabase\PalmDatabaseRecord.cs" />
+    <Compile Include="Mobipocket\PalmDatabase\PalmRecordAttributes.cs" />
+    <Compile Include="Mobipocket\TrailingEntry.cs" />
+    <Compile Include="Mobipocket\TrailingEntryCollection.cs" />
+    <Compile Include="Mobipocket\TrailingEntryParser.cs" />
+    <Compile Include="Mobipocket\VariableLengthIntegerHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DocumentResource.cs" />
+    <Compile Include="Text\TxtDocument.cs" />
+    <Compile Include="Text\TxtResourceTypes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
