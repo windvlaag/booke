@@ -1,0 +1,9 @@
+﻿[+] Big endian binary reader
+
+
+
+[-] Palm DB writing
+[-] parsing mobi header
+	[-]	trailing entries proper parsing
+
+[-] iamgewriter
