@@ -1,0 +1,1 @@
+.NET Library for reading and creating .mobi files
